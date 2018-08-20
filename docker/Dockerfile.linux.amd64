@@ -1,5 +1,5 @@
 FROM alpine:3.6
-RUN apk add --no-cache ca-certificates git openssh curl perl
+RUN apk add --no-cache ca-certificates openssl git openssh curl perl
 
 ADD posix/* /usr/local/bin/
 ENTRYPOINT ["/usr/local/bin/clone"]
